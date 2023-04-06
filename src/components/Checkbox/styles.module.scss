@@ -1,0 +1,47 @@
+.Checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 22px;
+  padding-left: 37px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #343434;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:hover input ~ .checkmark {
+    background-image: url(../../assets/images/checkmark-gray.svg);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark {
+      background-image: url(../../assets/images/checkmark-white.svg);
+      background-color: #457df1;
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-repeat: no-repeat;
+    background-position: center bottom 5px;
+    background-color: #ececec;
+    border-radius: 8px;
+  }
+}
